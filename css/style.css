@@ -1939,9 +1939,11 @@ button {
   display: flex;
   gap: 0;
   overflow-x: auto;
+  overflow-y: hidden;
   scrollbar-width: none;
   border-bottom: 1px solid var(--color-border);
   margin-bottom: 0;
+  touch-action: pan-x;
 }
 
 .prog-tabs::-webkit-scrollbar { display: none; }
@@ -2615,7 +2617,7 @@ button {
 
 /* ---- ラッパー（人物はみ出し分の上余白） ---- */
 .event-wrap {
-  padding-top: 60px;
+  padding-top: 20px;
   position: relative;
 }
 
@@ -2634,7 +2636,7 @@ button {
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.35s ease;
   /* スマホでは正方形を解除して最小高さで対応 */
-  min-height: 200px;
+  min-height: 170px;
 }
 
 @media (min-width: 768px) {
@@ -2671,8 +2673,8 @@ button {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 50%;
-  height: 130%; /* スマホではみ出しを小さく */
+  width: 48%;
+  height: 108%; /* スマホ：少しだけはみ出す */
   z-index: 2;
   pointer-events: none;
 }
@@ -2890,7 +2892,7 @@ button {
   background-color: var(--color-border);
 }
 
-/* ---- PC（768px〜）：3列に ---- */
+/* ---- タブレット（768px〜）：3列に ---- */
 @media (min-width: 768px) {
   .events {
     padding: 120px 0;
@@ -2902,22 +2904,28 @@ button {
   }
 
   .event-wrap {
-    padding-top: 100px;
+    padding-top: 25px;
   }
 
   .event-card__figure {
-    width: 52%;
-    height: 150%;
+    width: 50%;
+    height: 110%; /* タブレット：少しだけはみ出す */
   }
 }
 
+/* ---- PC（1024px〜） ---- */
 @media (min-width: 1024px) {
   .events__grid {
     gap: 32px 24px;
   }
 
   .event-wrap {
-    padding-top: 88px;
+    padding-top: 30px;
+  }
+
+  .event-card__figure {
+    width: 52%;
+    height: 112%; /* PC：少しだけはみ出す */
   }
 }
 
