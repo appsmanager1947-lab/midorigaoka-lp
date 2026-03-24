@@ -2583,16 +2583,6 @@ button {
   letter-spacing: 0.02em;
 }
 
-/* イベントカード説明文 */
-.event-card__desc {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: clamp(9px, 1.2vw, 11px);
-  line-height: 1.75;
-  letter-spacing: 0.03em;
-  opacity: 0.82;
-  margin-bottom: 4px;
-}
-
 /* 予約ボタン */
 .event-card__btn {
   display: inline-block;
@@ -2644,6 +2634,37 @@ button {
   color: #2E5E27;
 }
 
+/* イベント詳細ボタン */
+.events__detail-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.events__detail-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  background-color: var(--color-base);
+  color: var(--color-main);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border: 2px solid var(--color-main);
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 3px 3px 0 var(--color-main-light);
+}
+
+.events__detail-btn:hover {
+  background-color: var(--color-main);
+  color: #fff;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--color-main-light);
+}
+
 /* ---- マガジン風フッター ---- */
 .events__mag-footer {
   display: flex;
@@ -2665,6 +2686,34 @@ button {
 }
 
 .events__mag-footer-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+/* ========================================
+   共通：マガジン風セクションフッター
+======================================== */
+.section-mag-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.section-mag-footer__text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--color-text-sub);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section-mag-footer__line {
   flex: 1;
   height: 1px;
   background-color: var(--color-border);
@@ -2760,6 +2809,16 @@ button {
   font-style: italic;
   color: var(--color-main-light);
   display: block;
+}
+
+.final-cta__title-line1 {
+  display: block;
+}
+
+.final-cta__title-line2 {
+  display: block;
+  font-style: italic;
+  color: var(--color-main-light);
 }
 
 .final-cta__sub {
