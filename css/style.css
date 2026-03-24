@@ -1351,7 +1351,7 @@ button {
 /* ---- 卒業後の進路タグ ---- */
 .flow__destinations {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 狭い画面では2列 */
   gap: 10px;
   width: 100%;
 }
@@ -1377,9 +1377,15 @@ button {
   box-shadow: 0 7px 20px rgba(0,0,0,0.11);
 }
 
+@media (min-width: 440px) {
+  .flow__destinations {
+    grid-template-columns: repeat(3, 1fr); /* 中間幅では3列 */
+  }
+}
+
 @media (min-width: 640px) {
   .flow__destinations {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr); /* タブレット以上で5列 */
   }
 }
 
@@ -1527,19 +1533,19 @@ button {
 }
 
 .merits__fig--tall {
-  width: 180px;
+  width: 100%; /* モバイルは全幅 */
 }
 
 .merits__fig--tall img {
-  height: 240px;
+  height: 220px; /* モバイルは少し低めに */
 }
 
 .merits__fig--md {
-  width: 160px;
+  width: 100%; /* モバイルは全幅 */
 }
 
 .merits__fig--md img {
-  height: 160px;
+  height: 180px; /* モバイルは少し低めに */
 }
 
 .merits__fig--wide {
@@ -1599,7 +1605,8 @@ button {
 /* ---- ブロック B ---- */
 .merits__block-b {
   display: flex;
-  gap: 28px;
+  flex-direction: column; /* モバイルは縦積み */
+  gap: 24px;
   align-items: flex-start;
 }
 
@@ -1612,7 +1619,8 @@ button {
 
 .merits__item-with-photo {
   display: flex;
-  gap: 20px;
+  flex-direction: column; /* モバイルは縦積み */
+  gap: 16px;
   align-items: flex-start;
 }
 
@@ -1708,6 +1716,17 @@ button {
     height: 180px;
   }
 
+  .merits__block-b {
+    flex-direction: row; /* PC以上で横並びに戻す */
+    gap: 28px;
+  }
+
+  .merits__item-with-photo {
+    flex-direction: row; /* PC以上で横並びに戻す */
+    gap: 20px;
+    align-items: flex-start;
+  }
+
   .merits__block-c {
     grid-template-columns: 1fr 2px 1fr;
     gap: 0;
@@ -1740,7 +1759,17 @@ button {
   }
 
   .merits__fig--tall {
-    width: 220px;
+    width: 220px; /* PC時は固定幅に戻す */
+    flex-shrink: 0;
+  }
+
+  .merits__fig--md {
+    width: 160px; /* PC時は固定幅に戻す */
+    flex-shrink: 0;
+  }
+
+  .merits__fig--md img {
+    height: 160px;
   }
 
   .merits__fig--tall img {
