@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="神奈川歯科大学系属 緑ヶ丘女子中学校・高等学校 — 2026年、新たなステージへ。学校説明会・オープンスクール開催中。">
+  <title>緑ヶ丘女子高等学校 | 2026年 新章始動</title>
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================
+       ナビゲーションバー（固定）
+  ======================================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <!-- 左：ロゴ -->
+      <a class="navbar__logo" href="#">
+        <!-- 実際の画像に差し替える場合は下記のコメントを外し、テキストロゴを削除 -->
+        <!-- <img src="img/logo.png" alt="緑ヶ丘女子高等学校" width="160" height="40"> -->
+        <span class="navbar__logo-text">緑ヶ丘女子</span>
+      </a>
+
+      <!-- 中央：PCナビリンク -->
+      <nav class="navbar__nav" id="navbar-nav" aria-label="メインナビゲーション">
+        <ul class="navbar__nav-list">
+          <li><a href="#about">学校について</a></li>
+          <li><a href="#features">進化のポイント</a></li>
+          <li><a href="#programs">プログラム</a></li>
+          <li><a href="#event">イベント</a></li>
+          <li><a href="#access">アクセス</a></li>
+        </ul>
+      </nav>
+
+      <!-- 右：CTA ボタン -->
+      <a class="navbar__cta" href="#event">説明会を予約する</a>
+
+      <!-- ハンバーガーボタン（スマホ用） -->
+      <button class="navbar__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="navbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ハンバーガーメニュー（スマホ用ドロワー） -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <ul class="drawer__list">
+      <li><a href="#about" class="drawer__link">学校について</a></li>
+      <li><a href="#features" class="drawer__link">進化のポイント</a></li>
+      <li><a href="#programs" class="drawer__link">プログラム</a></li>
+      <li><a href="#event" class="drawer__link">イベント</a></li>
+      <li><a href="#access" class="drawer__link">アクセス</a></li>
+      <li><a href="#event" class="drawer__link drawer__link--cta">説明会を予約する</a></li>
+    </ul>
+  </div>
+  <!-- ドロワー背景オーバーレイ -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+
+  <!-- ========================================
+       Hero セクション — 雑誌風2カラムレイアウト
+  ======================================== -->
+  <section class="hero" id="hero">
+
+    <!-- 左：写真パネル -->
+    <div class="hero__photo-panel">
+      <img
+        class="hero__photo"
+        src="img/hero.jpg"
+        alt="緑ヶ丘女子高等学校の生徒"
+        loading="eager"
+      >
+      <!-- 写真に重なるバッジ -->
+      <div class="hero__badge hero__badge--vol">
+        <span>VOL.01</span>
+        <span>2026</span>
+      </div>
+      <div class="hero__badge hero__badge--new">NEW</div>
+      <!-- 斜め区切りのデコレーション -->
+      <div class="hero__photo-accent"></div>
+    </div>
+
+    <!-- 右：テキストパネル -->
+    <div class="hero__text-panel">
+
+      <!-- 背景に超大きい装飾文字 -->
+      <span class="hero__bg-text" aria-hidden="true">GIRLS</span>
+
+      <!-- 雑誌ラベル -->
+      <div class="hero__magazine-label">
+        <span class="hero__magazine-line"></span>
+        <span class="hero__magazine-tag">NEW STAGE 2026</span>
+        <span class="hero__magazine-line"></span>
+      </div>
+
+      <!-- 縦書き＋横書き混在のキャッチコピー -->
+      <div class="hero__copy-wrap">
+        <p class="hero__copy-vertical" lang="ja">未来を</p>
+        <h1 class="hero__title" lang="ja">
+          <em>私が</em><br>選ぶ。
+        </h1>
+      </div>
+
+      <!-- サブコピー -->
+      <p class="hero__sub">
+        神奈川歯科大学系属校として<br>
+        新たなステージへ。
+      </p>
+
+      <!-- 区切り罫線 -->
+      <div class="hero__divider"></div>
+
+      <!-- CTA -->
+      <div class="hero__cta-wrap animate-item" data-delay="1.2">
+        <a class="hero__cta" href="#event">
+          イベント予約へ
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <span class="hero__cta-note">説明会・オープンスクール 随時開催中</span>
+      </div>
+
+    </div>
+
+    <!-- スクロール誘導 -->
+    <div class="hero__scroll">
+      <span class="hero__scroll-text">SCROLL</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+
+  </section>
+  <!-- /hero -->
+
+
+  <!-- ========================================
+       Section 2：なぜ生まれ変わるのか（理念・背景）
+  ======================================== -->
+  <section class="why" id="about">
+    <div class="why__inner">
+
+      <!-- 左：テキストエリア -->
+      <div class="why__text scroll-reveal scroll-reveal--left">
+
+        <!-- セクションラベル -->
+        <div class="section-label">
+          <span class="section-label__line"></span>
+          <span class="section-label__tag">STORY 01</span>
+        </div>
+
+        <!-- キャッチフレーズ -->
+        <h2 class="why__catch">
+          見えていない未来が、<br><em>見えてくる学校。</em>
+        </h2>
+
+        <!-- 本文 -->
+        <div class="why__body">
+          <p>
+            夢がある子も、まだ迷っている子も、<br>
+            緑ヶ丘女子には居場所がある。
+          </p>
+          <hr class="why__body-divider">
+          <p>
+            医療の現場で実習する子、幼稚園で子どもと向き合う子、<br>
+            企業家に取材する子、全国を目指してグラウンドを駆ける子——<br>
+            同じ校舎で、それぞれが「本物の経験」を積んでいきます。<br>
+            あなたの「やってみたい」を、ここが本気で応援します。
+          </p>
+        </div>
+
+        <!-- テキストリンク -->
+        <a class="why__link" href="#features">
+          どう変わるのか、見てみる
+          <svg class="why__link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+      </div>
+      <!-- /why__text -->
+
+      <!-- 右：数字ビジュアル -->
+      <div class="why__stats scroll-reveal scroll-reveal--right">
+
+        <div class="why__stat">
+          <span class="why__stat-num" data-count="80">0</span>
+          <span class="why__stat-unit">年</span>
+          <p class="why__stat-label">受け継がれてきた女子教育の歴史</p>
+        </div>
+
+        <div class="why__stat">
+          <span class="why__stat-num" data-count="6">0</span>
+          <span class="why__stat-unit">つ</span>
+          <p class="why__stat-label">の本格専門プログラム（2年次から）</p>
+        </div>
+
+        <div class="why__stat">
+          <span class="why__stat-num" data-count="2">0</span>
+          <span class="why__stat-unit">つ</span>
+          <p class="why__stat-label">のクラスで夢を見つける</p>
+        </div>
+
+      </div>
+      <!-- /why__stats -->
+
+    </div>
+
+    <!-- 背景装飾（大きな薄い丸） -->
+    <div class="why__deco-circle" aria-hidden="true"></div>
+
+  </section>
+
+
+  <!-- ========================================
+       Section 3：進化の4つのポイント
+  ======================================== -->
+  <section class="points" id="features">
+    <div class="points__inner">
+
+      <!-- セクションヘッダー -->
+      <div class="points__header scroll-reveal scroll-reveal--left">
+        <div class="section-label">
+          <span class="section-label__line"></span>
+          <span class="section-label__tag">FEATURE</span>
+        </div>
+        <h2 class="points__title">緑ヶ丘女子の進化、<br><em>4つのポイント</em></h2>
+        <p class="points__subtitle">2026年度より、新しい緑ヶ丘女子がはじまります。</p>
+      </div>
+
+      <!-- カードグリッド -->
+      <div class="points__grid">
+
+        <!-- Point 01 -->
+        <article class="point-card scroll-reveal" style="--delay: 0s">
+          <div class="point-card__accent"></div>
+          <div class="point-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M16 28V16M16 16C16 16 10 14 8 8c4 0 8 2 8 8zM16 16c0 0 6-2 8-8-4 0-8 2-8 8z" stroke="var(--color-main)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="point-card__num" aria-hidden="true">01</span>
+          <h3 class="point-card__title">
+            入学時は「2クラス制」だから、<br>
+            やりたいことが決まってなくても安心
+          </h3>
+          <p class="point-card__body">
+            入学時はSクラス・Aクラスの2クラス制を採用。
+            受験のときに将来が決まっていなくても大丈夫。
+            1年間かけて基礎プログラムを体験しながら、
+            自分に合った道をじっくり見つけていけます。
+            国語・英語・数学は習熟度別授業で、
+            一人ひとりのペースに寄り添って伸ばします。
+          </p>
+        </article>
+
+        <!-- Point 02 -->
+        <article class="point-card scroll-reveal" style="--delay: 0.15s">
+          <div class="point-card__accent"></div>
+          <div class="point-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 8h4l4 8 4-8h4M16 16v12" stroke="var(--color-main)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="point-card__num" aria-hidden="true">02</span>
+          <h3 class="point-card__title">
+            2年次から「6つのプログラム」で、<br>
+            本格的な学びへ
+          </h3>
+          <p class="point-card__body">
+            1年次の経験をもとに、2年次から6つの専門プログラムを選択。
+            看護・教育・探究・キャリア・進学・スポーツと、
+            多様な進路に対応した本格的な学びがスタートします。
+            「やりたいこと」が明確になった2年次から、
+            一気に専門性を高めていけるのが緑ヶ丘女子の強みです。
+          </p>
+        </article>
+
+        <!-- Point 03 -->
+        <article class="point-card scroll-reveal" style="--delay: 0.3s">
+          <div class="point-card__accent"></div>
+          <div class="point-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M4 14l12-8 12 8M8 14v10h16V14M16 24v-6" stroke="var(--color-main)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="point-card__num" aria-hidden="true">03</span>
+          <h3 class="point-card__title">
+            神奈川歯科大学との系属校化で、<br>
+            大学の学びが高校から体験できる
+          </h3>
+          <p class="point-card__body">
+            体育館・学習スペースの利用はもちろん、
+            大学の講義への参加や本校への出張授業も実現。
+            大学の先生や先輩たちとの交流を通じて、
+            「卒業後の自分」をリアルにイメージできる環境が整います。
+          </p>
+        </article>
+
+        <!-- Point 04 -->
+        <article class="point-card scroll-reveal" style="--delay: 0.45s">
+          <div class="point-card__accent"></div>
+          <div class="point-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M16 28s-12-7-12-16a6 6 0 0 1 12 0 6 6 0 0 1 12 0c0 9-12 16-12 16z" stroke="var(--color-main)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="point-card__num" aria-hidden="true">04</span>
+          <h3 class="point-card__title">
+            「エンジェルルーム」で、<br>
+            心と体に寄り添うサポート体制
+          </h3>
+          <p class="point-card__body">
+            エンジェルルームは、安心できる空間で
+            心のケアや課題学習に取り組める場所。
+            保健室・カウンセリングルームとも連携し、
+            心身の変化が大きい高校時代を、学校全体で支えます。
+          </p>
+        </article>
+
+      </div>
+      <!-- /points__grid -->
+
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       Section 4：クラス編成の仕組み（図解）
+  ======================================== -->
+  <section class="system" id="course">
+    <div class="system__inner">
+
+      <!-- セクションヘッダー -->
+      <div class="system__header scroll-reveal scroll-reveal--left">
+        <div class="section-label">
+          <span class="section-label__line"></span>
+          <span class="section-label__tag">SYSTEM</span>
+        </div>
+        <h2 class="system__title">
+          入学から卒業まで、<br><em>あなたの道を自分で選ぶ。</em>
+        </h2>
+        <p class="system__subtitle">
+          1年次はまず土台を。2年次から、本格的な専門の学びへ。
+        </p>
+      </div>
+
+      <!-- フロー図 -->
+      <div class="flow scroll-reveal">
+
+        <!-- Step 1：1年次 -->
+        <div class="flow__step">
+          <div class="flow__step-label">
+            <span class="flow__year">1年次</span>
+            <span class="flow__year-sub">入学時はこちらに所属</span>
+          </div>
+          <div class="flow__classes">
+            <div class="flow__class flow__class--s">
+              <span class="flow__class-name">S クラス</span>
+              <span class="flow__class-sub">（旧：特進・看護医療コース）</span>
+              <p class="flow__class-desc">習熟度重視・大学進学を強く意識したクラス</p>
+            </div>
+            <div class="flow__class-plus">＋</div>
+            <div class="flow__class flow__class--a">
+              <span class="flow__class-name">A クラス</span>
+              <span class="flow__class-sub">（旧：総合・進学、幼児教育コース）</span>
+              <p class="flow__class-desc">多様な進路に対応した幅広い学びのクラス</p>
+            </div>
+          </div>
+          <p class="flow__reassurance">
+            ✦ 受験時に将来が決まっていなくても大丈夫。どちらのクラスからも、全プログラムへ進めます。
+          </p>
+        </div>
+
+        <!-- 矢印：収束 -->
+        <div class="flow__arrow flow__arrow--converge" aria-hidden="true">
+          <svg viewBox="0 0 320 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 0 Q60 40 160 40" stroke="var(--color-main)" stroke-width="2" stroke-dasharray="6 4"/>
+            <path d="M260 0 Q260 40 160 40" stroke="var(--color-main)" stroke-width="2" stroke-dasharray="6 4"/>
+            <path d="M160 40 L160 60" stroke="var(--color-main)" stroke-width="2"/>
+            <polygon points="155,56 160,64 165,56" fill="var(--color-main)"/>
+          </svg>
+          <span class="flow__arrow-label">2年次からプログラムを選択</span>
+        </div>
+
+        <!-- Step 2：2・3年次 6プログラム -->
+        <div class="flow__step">
+          <div class="flow__step-label">
+            <span class="flow__year">2・3年次</span>
+            <span class="flow__year-sub">6つの専門プログラムから選択</span>
+          </div>
+          <div class="flow__programs">
+            <div class="flow__program flow__program--academics">
+              <span class="flow__program-en">Academics</span>
+              <span class="flow__program-ja">アカデミクス</span>
+              <p class="flow__program-desc">上位大学進学を目指す</p>
+              <span class="flow__program-cond flow__program-cond--s">Sクラス所属条件</span>
+            </div>
+            <div class="flow__program flow__program--nursing">
+              <span class="flow__program-en">Nursing</span>
+              <span class="flow__program-ja">看護医療</span>
+              <p class="flow__program-desc">医療・看護の道へ</p>
+            </div>
+            <div class="flow__program flow__program--child">
+              <span class="flow__program-en">Child Ed.</span>
+              <span class="flow__program-ja">こども教育</span>
+              <p class="flow__program-desc">保育・教育者を育てる</p>
+            </div>
+            <div class="flow__program flow__program--future">
+              <span class="flow__program-en">Future</span>
+              <span class="flow__program-ja">未来探究</span>
+              <p class="flow__program-desc">やりたいことを探す</p>
+            </div>
+            <div class="flow__program flow__program--career">
+              <span class="flow__program-en">Career</span>
+              <span class="flow__program-ja">キャリアビルド</span>
+              <p class="flow__program-desc">専門職・資格取得へ</p>
+              <span class="flow__program-cond flow__program-cond--a">Aクラス所属条件</span>
+            </div>
+            <div class="flow__program flow__program--sports">
+              <span class="flow__program-en">Sports</span>
+              <span class="flow__program-ja">スポーツ</span>
+              <p class="flow__program-desc">競技と進学を両立</p>
+              <span class="flow__program-cond flow__program-cond--a">Aクラス所属条件</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 矢印：下向き -->
+        <div class="flow__arrow flow__arrow--down" aria-hidden="true">
+          <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 0 L20 36" stroke="var(--color-main)" stroke-width="2"/>
+            <polygon points="14,32 20,44 26,32" fill="var(--color-main)"/>
+          </svg>
+        </div>
+
+        <!-- Step 3：卒業・進路 -->
+        <div class="flow__step">
+          <div class="flow__step-label">
+            <span class="flow__year">卒業後の進路</span>
+            <span class="flow__year-sub">多様な進路に対応しています</span>
+          </div>
+          <div class="flow__destinations">
+            <span class="flow__dest">大学進学</span>
+            <span class="flow__dest">看護系大学</span>
+            <span class="flow__dest">教育系大学・短大</span>
+            <span class="flow__dest">専門学校</span>
+            <span class="flow__dest">就職</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- /flow -->
+
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       Section 5：6つの専門プログラム詳細（雑誌風タブUI）
+  ======================================== -->
+  <section class="programs" id="programs">
+    <div class="programs__inner">
+
+      <!-- ページヘッダー -->
+      <div class="programs__page-header">
+        <div class="section-label">
+          <span class="section-label__line"></span>
+          <span class="section-label__tag">PROGRAMS</span>
+        </div>
+        <span class="programs__page-num">P.05</span>
+      </div>
+
+      <!-- セクション見出し -->
+      <div class="programs__headline scroll-reveal scroll-reveal--left">
+        <h2 class="programs__title">
+          6つのプログラムから、<br><em>自分の道を見つける。</em>
+        </h2>
+        <p class="programs__subtitle">
+          気になるプログラムを選んで、詳しく見てみましょう。
+        </p>
+      </div>
+
+      <div class="programs__rule"></div>
+
+      <!-- 目次バー（タブボタン） -->
+      <nav class="prog-tabs" role="tablist" aria-label="専門プログラム一覧">
+        <button class="prog-tab is-active" role="tab" aria-selected="true"
+          aria-controls="panel-academics" data-target="academics">
+          <span class="prog-tab__num">01</span>
+          <span class="prog-tab__name">アカデミクス</span>
+        </button>
+        <button class="prog-tab" role="tab" aria-selected="false"
+          aria-controls="panel-nursing" data-target="nursing">
+          <span class="prog-tab__num">02</span>
+          <span class="prog-tab__name">看護医療</span>
+        </button>
+        <button class="prog-tab" role="tab" aria-selected="false"
+          aria-controls="panel-child" data-target="child">
+          <span class="prog-tab__num">03</span>
+          <span class="prog-tab__name">こども教育</span>
+        </button>
+        <button class="prog-tab" role="tab" aria-selected="false"
+          aria-controls="panel-future" data-target="future">
+          <span class="prog-tab__num">04</span>
+          <span class="prog-tab__name">未来探究</span>
+        </button>
+        <button class="prog-tab" role="tab" aria-selected="false"
+          aria-controls="panel-career" data-target="career">
+          <span class="prog-tab__num">05</span>
+          <span class="prog-tab__name">キャリアビルド</span>
+        </button>
+        <button class="prog-tab" role="tab" aria-selected="false"
+          aria-controls="panel-sports" data-target="sports">
+          <span class="prog-tab__num">06</span>
+          <span class="prog-tab__name">スポーツ</span>
+        </button>
+      </nav>
+
+      <div class="programs__rule"></div>
+
+      <!-- パネル共通ラッパー -->
+      <div class="prog-panels">
+
+        <!-- Panel：アカデミクス -->
+        <div class="prog-panel is-active" id="panel-academics" role="tabpanel">
+          <span class="prog-panel__bg-num" aria-hidden="true">01</span>
+          <div class="prog-panel__layout">
+
+            <figure class="prog-panel__fig">
+              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&q=80"
+                alt="アカデミクスプログラム" loading="lazy">
+              <figcaption>
+                <span class="prog-panel__fig-label">Academics</span>
+                上位大学進学を目指す
+              </figcaption>
+            </figure>
+
+            <div class="prog-panel__content">
+              <span class="prog-panel__en">Academics Program</span>
+              <h3 class="prog-panel__name">アカデミクス</h3>
+              <span class="prog-panel__for">上位大学進学を目指したい人へ</span>
+
+              <div class="prog-panel__features">
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">放課後講座＋季節セミナー</span>
+                  <p>英・数・国の放課後講座や夏期・冬期セミナーで、一般選抜に挑むための土台を徹底的に築きます。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">3年次はハイレベルな特別講座</span>
+                  <p>大学進学講座・模試対策・過去問対策など、より実践的な学習で4年制大学合格を目指します。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">少人数制で塾なしでも伸びる</span>
+                  <p>きめ細やかな個別指導で、一人ひとりの学力を確実に引き上げます。</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Panel：看護医療 -->
+        <div class="prog-panel" id="panel-nursing" role="tabpanel" hidden>
+          <span class="prog-panel__bg-num" aria-hidden="true">02</span>
+          <div class="prog-panel__layout">
+
+            <figure class="prog-panel__fig">
+              <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=500&q=80"
+                alt="看護医療プログラム" loading="lazy">
+              <figcaption>
+                <span class="prog-panel__fig-label">Nursing</span>
+                医療・看護の道へ
+              </figcaption>
+            </figure>
+
+            <div class="prog-panel__content">
+              <span class="prog-panel__en">Nursing &amp; Medical Care</span>
+              <h3 class="prog-panel__name">看護医療</h3>
+              <span class="prog-panel__for">医療・看護の道に進みたい人へ</span>
+
+              <div class="prog-panel__features">
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">夏休み5日間の看護医療セミナー</span>
+                  <p>医療従事者を招いての講義や病院体験を通じて、看護の心得をリアルに学びます。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">聖ヨゼフ病院での3日間看護体験</span>
+                  <p>ナース服を着用し、病棟業務や患者交流を体験。医療人としての意識を高めます。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">大学教員による面接・志望理由書対策</span>
+                  <p>長年の実績を活かした専門的な入試対策で、看護系大学合格へ導きます。</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Panel：こども教育 -->
+        <div class="prog-panel" id="panel-child" role="tabpanel" hidden>
+          <span class="prog-panel__bg-num" aria-hidden="true">03</span>
+          <div class="prog-panel__layout">
+
+            <figure class="prog-panel__fig">
+              <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500&q=80"
+                alt="こども教育プログラム" loading="lazy">
+              <figcaption>
+                <span class="prog-panel__fig-label">Child Education</span>
+                保育・教育者を育てる
+              </figcaption>
+            </figure>
+
+            <div class="prog-panel__content">
+              <span class="prog-panel__en">Child Education Program</span>
+              <h3 class="prog-panel__name">こども教育</h3>
+              <span class="prog-panel__for">保育士・教師を目指したい人へ</span>
+
+              <div class="prog-panel__features">
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">毎週のピアノレッスン＋保育所実習</span>
+                  <p>実技と実習を並行して積み重ね、即戦力となる専門性を3年間で磨きます。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">横須賀幼稚園で1年間の長期実習</span>
+                  <p>小学校実習にも対応し、幼児教育・初等教育の両方を体験できます。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">卒業生全員が教育系上級学校へ進学</span>
+                  <p>多くの大学・短大に指定校枠があり、確実な進路実績を誇ります。</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Panel：未来探究 -->
+        <div class="prog-panel" id="panel-future" role="tabpanel" hidden>
+          <span class="prog-panel__bg-num" aria-hidden="true">04</span>
+          <div class="prog-panel__layout">
+
+            <figure class="prog-panel__fig">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80"
+                alt="未来探究プログラム" loading="lazy">
+              <figcaption>
+                <span class="prog-panel__fig-label">Future Exploration</span>
+                やりたいことを探す
+              </figcaption>
+            </figure>
+
+            <div class="prog-panel__content">
+              <span class="prog-panel__en">Future Exploration Program</span>
+              <h3 class="prog-panel__name">未来探究</h3>
+              <span class="prog-panel__for">やりたいことを探している人へ</span>
+
+              <div class="prog-panel__features">
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">企業見学・社会人講話で自分を発見</span>
+                  <p>多様な職業人との出会いを通じて、自分の興味・適性を見つけていきます。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">外部の探究活動にも積極参加</span>
+                  <p>かながわ・ゆめ・みらいやアントレラボなど、校外の舞台で探究力を磨きます。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">専門家への取材からイベント主催まで</span>
+                  <p>社会課題をテーマに現役医師・専門家へ取材し、ディスカッションイベントを主催した実績があります。</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Panel：キャリアビルド -->
+        <div class="prog-panel" id="panel-career" role="tabpanel" hidden>
+          <span class="prog-panel__bg-num" aria-hidden="true">05</span>
+          <div class="prog-panel__layout">
+
+            <figure class="prog-panel__fig">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80"
+                alt="キャリアビルドプログラム" loading="lazy">
+              <figcaption>
+                <span class="prog-panel__fig-label">Career Build</span>
+                専門職・資格取得へ
+              </figcaption>
+            </figure>
+
+            <div class="prog-panel__content">
+              <span class="prog-panel__en">Career Build Program</span>
+              <h3 class="prog-panel__name">キャリアビルド</h3>
+              <span class="prog-panel__for">専門職・資格取得を目指す人へ</span>
+
+              <div class="prog-panel__features">
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">専門学校からの出張授業を年数回実施</span>
+                  <p>生徒の希望・適性に合わせて、多様な分野の専門学校から講師を招きます。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">情報処理検定・MOSなど資格取得支援</span>
+                  <p>多様な資格試験への挑戦を学校全体で支援し、進路の可能性を広げます。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">専門にとどまらない柔軟な進路対応</span>
+                  <p>目標とする職業への最短ルートを探しながら、より広い可能性も視野に入れてサポートします。</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Panel：スポーツ -->
+        <div class="prog-panel" id="panel-sports" role="tabpanel" hidden>
+          <span class="prog-panel__bg-num" aria-hidden="true">06</span>
+          <div class="prog-panel__layout">
+
+            <figure class="prog-panel__fig">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80"
+                alt="スポーツプログラム" loading="lazy">
+              <figcaption>
+                <span class="prog-panel__fig-label">Sports</span>
+                競技と進学を両立
+              </figcaption>
+            </figure>
+
+            <div class="prog-panel__content">
+              <span class="prog-panel__en">Sports Program</span>
+              <h3 class="prog-panel__name">スポーツ</h3>
+              <span class="prog-panel__for">部活と進学を両立したい人へ</span>
+
+              <div class="prog-panel__features">
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">スポーツ優遇制度での入学が可能</span>
+                  <p>新体操・バレーボールの強化指定部活動に所属する受験生を対象とした特別入試制度があります。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">3年次は午後がまるごと部活動の時間</span>
+                  <p>午前中に必修授業を集中して終わらせ、午後は思いきり競技に打ち込める時間割を実現。</p>
+                </div>
+                <div class="prog-panel__feature">
+                  <span class="prog-panel__feature-label">運動理論も学ぶオリジナル授業</span>
+                  <p>体の仕組みや効果的なトレーニング理論も学び、スポーツを多角的に理解します。</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- /prog-panels -->
+
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       Section 6：系属校化による4つのメリット（誌面風）
+  ======================================== -->
+  <section class="merits" id="merits">
+    <div class="merits__inner">
+
+      <!-- 誌面上部：ページ番号＋セクションラベル -->
+      <div class="merits__page-header">
+        <div class="section-label">
+          <span class="section-label__line"></span>
+          <span class="section-label__tag">MERIT</span>
+        </div>
+        <span class="merits__page-num">P.06</span>
+      </div>
+
+      <!-- ブロック A：見出し＋小写真2枚 -->
+      <div class="merits__block-a">
+
+        <div class="merits__headline scroll-reveal scroll-reveal--left">
+          <h2 class="merits__title">
+            大学と繋がることで、<br><em>高校生活が変わる。</em>
+          </h2>
+          <p class="merits__title-sub">
+            神奈川歯科大学系属校だからこそ実現できる<br>4つの特別な環境をご紹介します。
+          </p>
+        </div>
+
+        <div class="merits__photo-pair scroll-reveal scroll-reveal--right">
+          <figure class="merits__fig merits__fig--sm">
+            <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?w=400&q=80" alt="大学施設" loading="lazy">
+            <figcaption>
+              <span class="merits__fig-label">大学施設</span>
+              広大なキャンパスで学ぶ
+            </figcaption>
+          </figure>
+          <figure class="merits__fig merits__fig--sm merits__fig--offset">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&q=80" alt="授業風景" loading="lazy">
+            <figcaption>
+              <span class="merits__fig-label">大学講義</span>
+              高校生が大学の授業へ
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="merits__rule"></div>
+
+      <!-- ブロック B：Merit 01（縦長写真＋テキスト横並び） -->
+      <div class="merits__block-b scroll-reveal">
+
+        <figure class="merits__fig merits__fig--tall">
+          <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=300&q=80" alt="大学の施設" loading="lazy">
+          <figcaption>
+            <span class="merits__fig-label">Facility</span>
+          </figcaption>
+        </figure>
+
+        <div class="merits__item">
+          <div class="merits__item-num">01</div>
+          <h3 class="merits__item-title">大学の施設・講義が、<br>高校生から使える</h3>
+          <p class="merits__item-body">
+            学習スペース・体育館・最新設備を高校生のうちから活用できます。
+            大学の先生による出張授業や講義参加も実現。
+            「大学生活ってどんな感じ？」を在学中にリアルに体験できます。
+          </p>
+          <span class="merits__item-badge">高校生から大学を体験</span>
+        </div>
+
+      </div>
+
+      <div class="merits__rule"></div>
+
+      <!-- ブロック C：Merit 02 ＋ Merit 03（2列） -->
+      <div class="merits__block-c">
+
+        <div class="merits__item-with-photo scroll-reveal" style="--delay:0.1s">
+          <div class="merits__item">
+            <div class="merits__item-num">02</div>
+            <h3 class="merits__item-title">大学施設で、クラブ活動がもっと充実</h3>
+            <p class="merits__item-body">
+              広い体育館・本格的な運動施設で、
+              思い切り競技に打ち込めます。
+              高校の枠を超えた環境が待っています。
+            </p>
+          </div>
+          <figure class="merits__fig merits__fig--md">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&q=80" alt="クラブ活動" loading="lazy">
+            <figcaption>
+              <span class="merits__fig-label">Sports</span>
+              本格的な施設でトレーニング
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="merits__col-divider" aria-hidden="true"></div>
+
+        <div class="merits__item-with-photo scroll-reveal" style="--delay:0.2s">
+          <figure class="merits__fig merits__fig--md">
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=300&q=80" alt="カレッジライフ" loading="lazy">
+            <figcaption>
+              <span class="merits__fig-label">Campus Life</span>
+              大学行事に高校生が参加
+            </figcaption>
+          </figure>
+          <div class="merits__item">
+            <div class="merits__item-num">03</div>
+            <h3 class="merits__item-title">高1からはじまる、ちょっと早い大学体験</h3>
+            <p class="merits__item-body">
+              学園祭への参加・ブース出店など
+              「大学生の空気」を高校1年生から体験。
+              将来の進路をイメージするきっかけに。
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="merits__rule"></div>
+
+      <!-- ブロック D：Merit 04（横長写真＋テキスト） -->
+      <div class="merits__block-d scroll-reveal" style="--delay:0.1s">
+
+        <figure class="merits__fig merits__fig--wide">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=900&q=80" alt="進学ルート" loading="lazy">
+          <figcaption>
+            <span class="merits__fig-label">Special Route</span>
+          </figcaption>
+        </figure>
+
+        <div class="merits__block-d-text">
+          <div class="merits__item">
+            <div class="merits__item-num">04</div>
+            <h3 class="merits__item-title">歯学系・看護系へのスペシャルな進学ルート</h3>
+            <p class="merits__item-body">
+              本校生だけを対象とした「系属校枠特別入試制度」を設置。
+              歯学系・看護系への進学を目指す生徒にとって大きなアドバンテージとなる、
+              系属校だからこそのサポートです。
+            </p>
+          </div>
+          <a class="merits__cta" href="#event">
+            説明会で詳しく聞く
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- 誌面フッター -->
+      <div class="merits__mag-footer">
+        <span class="merits__mag-footer-text">Midorigaoka Girls' High School — 2026</span>
+        <span class="merits__mag-footer-line"></span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       Section 7：在校生の声（雑誌風・縦長写真4列）
+  ======================================== -->
+  <section class="voices" id="voices">
+    <div class="voices__inner">
+
+      <!-- ページヘッダー -->
+      <div class="voices__page-header">
+        <div class="section-label">
+          <span class="section-label__line"></span>
+          <span class="section-label__tag">VOICE</span>
+        </div>
+        <span class="voices__page-num">P.07</span>
+      </div>
+
+      <!-- セクション見出し -->
+      <div class="voices__headline scroll-reveal scroll-reveal--left">
+        <h2 class="voices__title">在校生の声</h2>
+        <p class="voices__subtitle">
+          実際に通っている生徒たちの言葉を、そのままお届けします。
+        </p>
+      </div>
+
+      <div class="voices__rule"></div>
+
+      <!-- 4名 横一列グリッド -->
+      <div class="voices__grid">
+
+        <!-- 生徒1：K.Mさん -->
+        <article class="voice-card scroll-reveal" style="--delay:0s">
+
+          <div class="voice-card__photo-wrap">
+            <img
+              class="voice-card__photo"
+              src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80"
+              alt="K.Mさん"
+              loading="lazy"
+            >
+            <div class="voice-card__photo-grad"></div>
+          </div>
+
+          <div class="voice-card__text">
+            <div class="voice-card__name-block">
+              <span class="voice-card__program">Nursing / 2年生</span>
+              <h3 class="voice-card__name">K.M</h3>
+              <span class="voice-card__san">さん</span>
+            </div>
+            <div class="voice-card__rule"></div>
+            <p class="voice-card__catch">「実習で、本物の看護が見えた。」</p>
+            <p class="voice-card__comment">
+              入学前は自信がなかったけど、病院実習の話を聞いて「やっぱり行きたい」ってはっきり決まりました。先生がすごく親身で、志望理由書も一緒に考えてくれます。
+            </p>
+          </div>
+
+          <div class="voice-card__border-r" aria-hidden="true"></div>
+
+        </article>
+
+        <!-- 生徒2：A.Tさん -->
+        <article class="voice-card scroll-reveal" style="--delay:0.1s">
+
+          <div class="voice-card__photo-wrap">
+            <img
+              class="voice-card__photo"
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80"
+              alt="A.Tさん"
+              loading="lazy"
+            >
+            <div class="voice-card__photo-grad"></div>
+          </div>
+
+          <div class="voice-card__text">
+            <div class="voice-card__name-block">
+              <span class="voice-card__program">Academics / 3年生</span>
+              <h3 class="voice-card__name">A.T</h3>
+              <span class="voice-card__san">さん</span>
+            </div>
+            <div class="voice-card__rule"></div>
+            <p class="voice-card__catch">「塾なしで、第一志望に挑戦できる。」</p>
+            <p class="voice-card__comment">
+              放課後講座が充実していて、塾に行かなくても力がついている実感があります。少人数なので先生に質問もしやすいし、友達と一緒に頑張れる環境が好きです。
+            </p>
+          </div>
+
+          <div class="voice-card__border-r" aria-hidden="true"></div>
+
+        </article>
+
+        <!-- 生徒3：R.Sさん -->
+        <article class="voice-card scroll-reveal" style="--delay:0.2s">
+
+          <div class="voice-card__photo-wrap">
+            <img
+              class="voice-card__photo"
+              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80"
+              alt="R.Sさん"
+              loading="lazy"
+            >
+            <div class="voice-card__photo-grad"></div>
+          </div>
+
+          <div class="voice-card__text">
+            <div class="voice-card__name-block">
+              <span class="voice-card__program">Child Ed. / 2年生</span>
+              <h3 class="voice-card__name">R.S</h3>
+              <span class="voice-card__san">さん</span>
+            </div>
+            <div class="voice-card__rule"></div>
+            <p class="voice-card__catch">「幼稚園実習が、毎週の楽しみ。」</p>
+            <p class="voice-card__comment">
+              ピアノも保育実習もあって忙しいけど、子どもたちの笑顔を見るたびにやる気が出ます。緑ヶ丘に来て、夢がより具体的になりました。
+            </p>
+          </div>
+
+          <div class="voice-card__border-r" aria-hidden="true"></div>
+
+        </article>
+
+        <!-- 生徒4：Y.Kさん -->
+        <article class="voice-card scroll-reveal" style="--delay:0.3s">
+
+          <div class="voice-card__photo-wrap">
+            <img
+              class="voice-card__photo"
+              src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400&q=80"
+              alt="Y.Kさん"
+              loading="lazy"
+            >
+            <div class="voice-card__photo-grad"></div>
+          </div>
+
+          <div class="voice-card__text">
+            <div class="voice-card__name-block">
+              <span class="voice-card__program">A Class / 1年生</span>
+              <h3 class="voice-card__name">Y.K</h3>
+              <span class="voice-card__san">さん</span>
+            </div>
+            <div class="voice-card__rule"></div>
+            <p class="voice-card__catch">「まだ迷ってていい、って言ってもらえた。」</p>
+            <p class="voice-card__comment">
+              将来がまったく決まっていなくて不安でした。でも1年生はいろんなプログラムを体験しながら考えられるので、焦らなくていいんだとわかって安心しました。
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+      <!-- /voices__grid -->
+
+      <!-- マガジン風フッター -->
+      <div class="voices__mag-footer">
+        <span class="voices__mag-footer-text">Midorigaoka Girls' High School — Student Voice</span>
+        <span class="voices__mag-footer-line"></span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       Section 8：イベント情報（正方形カード＋人物はみ出し）
+  ======================================== -->
+  <section class="events" id="event">
+    <div class="events__inner">
+
+      <!-- ページヘッダー -->
+      <div class="events__page-header">
+        <div class="section-label">
+          <span class="section-label__line"></span>
+          <span class="section-label__tag">EVENT</span>
+        </div>
+        <span class="events__page-num">P.08</span>
+      </div>
+
+      <!-- セクション見出し -->
+      <div class="events__headline scroll-reveal scroll-reveal--left">
+        <h2 class="events__title">
+          まずは、来てみてください。
+        </h2>
+        <p class="events__subtitle">
+          緑ヶ丘女子では、様々な形で学校を知っていただけるイベントを開催しています。<br>
+          すべて要予約です。お気軽にご参加ください。
+        </p>
+      </div>
+
+      <div class="events__rule"></div>
+
+      <!-- 6カードグリッド -->
+      <div class="events__grid">
+
+        <!-- Card 01：みどじょん説明会 -->
+        <div class="event-wrap scroll-reveal" style="--delay:0s">
+          <article class="event-card event-card--01">
+            <div class="event-card__figure">
+              <img
+                src="img/events1.png"
+                alt="みどじょん説明会"
+                loading="lazy"
+              >
+            </div>
+            <div class="event-card__content">
+              <span class="event-card__sub">MIDOJON</span>
+              <h3 class="event-card__name">みどじょん<br>説明会</h3>
+              <div class="event-card__meta">
+                <p class="event-card__date">〇月〇日（土）10:00〜12:00</p>
+                <p class="event-card__cap">定員：各回30名｜中学生・保護者</p>
+              </div>
+              <a class="event-card__btn" href="https://mirai-compass.net/usr/kmdrgokh/event/evtIndex.jsf" target="_blank" rel="noopener">
+                予約する →
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 02：学校見学会 -->
+        <div class="event-wrap scroll-reveal" style="--delay:0.08s">
+          <article class="event-card event-card--02">
+            <div class="event-card__figure">
+              <img
+                src="img/events1.png"
+                alt="学校見学会"
+                loading="lazy"
+              >
+            </div>
+            <div class="event-card__content">
+              <span class="event-card__sub">SCHOOL TOUR</span>
+              <h3 class="event-card__name">学校<br>見学会</h3>
+              <div class="event-card__meta">
+                <p class="event-card__date">〇月〇日（土）13:00〜15:00</p>
+                <p class="event-card__cap">定員：各回20名｜中学生・保護者</p>
+              </div>
+              <a class="event-card__btn" href="https://mirai-compass.net/usr/kmdrgokh/event/evtIndex.jsf" target="_blank" rel="noopener">
+                予約する →
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 03：オープンスクール -->
+        <div class="event-wrap scroll-reveal" style="--delay:0.16s">
+          <article class="event-card event-card--03">
+            <div class="event-card__figure">
+              <img
+                src="img/events1.png"
+                alt="オープンスクール"
+                loading="lazy"
+              >
+            </div>
+            <div class="event-card__content">
+              <span class="event-card__sub">OPEN SCHOOL</span>
+              <h3 class="event-card__name">オープン<br>スクール</h3>
+              <div class="event-card__meta">
+                <p class="event-card__date">〇月〇日（日）9:00〜13:00</p>
+                <p class="event-card__cap">定員：各回50名｜中学生（保護者同伴可）</p>
+              </div>
+              <a class="event-card__btn" href="https://mirai-compass.net/usr/kmdrgokh/event/evtIndex.jsf" target="_blank" rel="noopener">
+                予約する →
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 04：with20 -->
+        <div class="event-wrap scroll-reveal" style="--delay:0.24s">
+          <article class="event-card event-card--04">
+            <div class="event-card__figure">
+              <img
+                src="img/events1.png"
+                alt="with20"
+                loading="lazy"
+              >
+            </div>
+            <div class="event-card__content">
+              <span class="event-card__sub">WITH 20</span>
+              <h3 class="event-card__name">with<em>20</em></h3>
+              <div class="event-card__meta">
+                <p class="event-card__date">〇月〇日（土）14:00〜16:00</p>
+                <p class="event-card__cap">定員：各回20名｜中学生</p>
+              </div>
+              <a class="event-card__btn" href="https://mirai-compass.net/usr/kmdrgokh/event/evtIndex.jsf" target="_blank" rel="noopener">
+                予約する →
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 05：学校説明会 -->
+        <div class="event-wrap scroll-reveal" style="--delay:0.32s">
+          <article class="event-card event-card--05">
+            <div class="event-card__figure">
+              <img
+                src="img/events1.png"
+                alt="学校説明会"
+                loading="lazy"
+              >
+            </div>
+            <div class="event-card__content">
+              <span class="event-card__sub">INFO SESSION</span>
+              <h3 class="event-card__name">学校<br>説明会</h3>
+              <div class="event-card__meta">
+                <p class="event-card__date">〇月〇日（土）10:00〜12:00</p>
+                <p class="event-card__cap">定員：制限なし｜中学生・保護者</p>
+              </div>
+              <a class="event-card__btn" href="https://mirai-compass.net/usr/kmdrgokh/event/evtIndex.jsf" target="_blank" rel="noopener">
+                予約する →
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 06：入試説明会 -->
+        <div class="event-wrap scroll-reveal" style="--delay:0.4s">
+          <article class="event-card event-card--06">
+            <div class="event-card__figure">
+              <img
+                src="img/events1.png"
+                alt="入試説明会"
+                loading="lazy"
+              >
+            </div>
+            <div class="event-card__content">
+              <span class="event-card__sub">EXAM INFO</span>
+              <h3 class="event-card__name">入試<br>説明会</h3>
+              <div class="event-card__meta">
+                <p class="event-card__date">〇月〇日（土）14:00〜16:00</p>
+                <p class="event-card__cap">定員：制限なし｜中学生・保護者</p>
+              </div>
+              <a class="event-card__btn" href="https://mirai-compass.net/usr/kmdrgokh/event/evtIndex.jsf" target="_blank" rel="noopener">
+                予約する →
+              </a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+      <!-- /events__grid -->
+
+      <!-- マガジン風フッター -->
+      <div class="events__mag-footer">
+        <span class="events__mag-footer-text">Midorigaoka Girls' High School — Events</span>
+        <span class="events__mag-footer-line"></span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       Section 9：最終CTA + アクセス
+  ======================================== -->
+
+  <!-- 上段：最終CTAブロック -->
+  <section class="final-cta" id="cta">
+    <span class="final-cta__bg-text" aria-hidden="true">MIDORIGAOKA</span>
+
+    <div class="final-cta__inner">
+      <div class="final-cta__content scroll-reveal">
+
+        <div class="section-label final-cta__label">
+          <span class="section-label__line"></span>
+          <span class="section-label__tag">JOIN US</span>
+        </div>
+
+        <h2 class="final-cta__title">
+          緑ヶ丘女子を、<br>
+          <em>自分の目で確かめてください。</em>
+        </h2>
+
+        <p class="final-cta__sub">
+          学校説明会・オープンスクール、随時開催中。<br>
+          まずはお気軽にご参加ください。
+        </p>
+
+        <div class="final-cta__btns">
+          <a
+            class="final-cta__btn final-cta__btn--primary"
+            href="https://mirai-compass.net/usr/kmdrgokh/event/evtIndex.jsf"
+            target="_blank"
+            rel="noopener"
+          >
+            説明会・OSを予約する
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="final-cta__btn final-cta__btn--secondary" href="#">
+            資料請求はこちら
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 下段：アクセスブロック -->
+  <section class="access" id="access">
+    <div class="access__inner">
+
+      <div class="access__page-header">
+        <div class="section-label">
+          <span class="section-label__line"></span>
+          <span class="section-label__tag">ACCESS</span>
+        </div>
+        <span class="access__page-num">P.09</span>
+      </div>
+
+      <div class="access__body">
+
+        <!-- 左：Google Maps -->
+        <div class="access__map scroll-reveal scroll-reveal--left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.123!2d139.654321!3d35.273456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60184461db361b1f%3A0x4eb27a9d7e8cf5f3!2z57WQ44Ca5LmL5aWI5aW244GV5Lit5a2m5qCh44G244Gf6auY562J5qCh!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="緑ヶ丘女子高等学校 地図"
+          ></iframe>
+        </div>
+
+        <!-- 右：アクセス情報 -->
+        <div class="access__info scroll-reveal scroll-reveal--right">
+
+          <h2 class="access__school-name">
+            神奈川歯科大学系属<br>
+            緑ヶ丘女子中学校・高等学校
+          </h2>
+
+          <dl class="access__list">
+
+            <div class="access__item">
+              <dt class="access__item-label">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 2C5.79 2 4 3.79 4 6c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4zm0 5.5A1.5 1.5 0 1 1 8 4a1.5 1.5 0 0 1 0 3.5z" fill="var(--color-main)"/>
+                </svg>
+                住所
+              </dt>
+              <dd class="access__item-val">
+                〒238-0001<br>神奈川県横須賀市田戸台14
+              </dd>
+            </div>
+
+            <div class="access__item">
+              <dt class="access__item-label">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 3h3l1.5 3.5-1.8 1.1a8 8 0 0 0 3.7 3.7l1.1-1.8L14 11v3a1 1 0 0 1-1 1C6.37 15 1 9.63 1 4a1 1 0 0 1 1-1h1z" stroke="var(--color-main)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+                電話
+              </dt>
+              <dd class="access__item-val">
+                <a href="tel:0468221651">046-822-1651</a>
+              </dd>
+            </div>
+
+            <div class="access__item">
+              <dt class="access__item-label">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="1" y="3" width="14" height="10" rx="1" stroke="var(--color-main)" stroke-width="1.2"/>
+                  <path d="M1 4l7 5 7-5" stroke="var(--color-main)" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                交通
+              </dt>
+              <dd class="access__item-val">
+                京急線「馬堀海岸駅」より徒歩約15分<br>
+                JR横須賀線「衣笠駅」よりバス
+              </dd>
+            </div>
+
+          </dl>
+
+          <a
+            class="access__map-link"
+            href="https://maps.google.com/?q=神奈川県横須賀市田戸台14"
+            target="_blank"
+            rel="noopener"
+          >
+            Google マップで開く
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M7 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V9M10 2h4m0 0v4m0-4L7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span class="site-footer__logo">緑ヶ丘女子</span>
+      <nav class="site-footer__nav" aria-label="フッターナビ">
+        <a href="#about">学校について</a>
+        <a href="#features">進化のポイント</a>
+        <a href="#programs">プログラム</a>
+        <a href="#event">イベント</a>
+        <a href="#access">アクセス</a>
+      </nav>
+      <p class="site-footer__copy">
+        &copy; 2025 Midorigaoka Girls' Junior and Senior High School. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
