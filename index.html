@@ -86,7 +86,6 @@
         <span>VOL.01</span>
         <span>2026</span>
       </div>
-      <div class="hero__badge hero__badge--new">NEW</div>
       <!-- 斜め区切りのデコレーション -->
       <div class="hero__photo-accent"></div>
     </div>
@@ -135,10 +134,14 @@
     </div>
 
     <!-- スクロール誘導 -->
-    <div class="hero__scroll">
-      <span class="hero__scroll-text">SCROLL</span>
-      <div class="hero__scroll-line"></div>
-    </div>
+    <a class="hero__scroll" href="#about">
+      <span class="hero__scroll-text">進化を読む</span>
+      <div class="hero__scroll-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 7l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </a>
 
   </section>
   <!-- /hero -->
@@ -580,6 +583,17 @@
             </div>
 
           </div>
+
+          <div class="prog-nav">
+            <span class="prog-nav__spacer"></span>
+            <button class="prog-nav__btn prog-nav__btn--next" data-target="nursing">
+              次のプログラムを読む
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="prog-nav__next-name">看護医療</span>
+            </button>
+          </div>
         </div>
 
         <!-- Panel：看護医療 -->
@@ -617,6 +631,22 @@
               </div>
             </div>
 
+          </div>
+
+          <div class="prog-nav">
+            <button class="prog-nav__btn prog-nav__btn--prev" data-target="academics">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              前のプログラムを読む
+            </button>
+            <button class="prog-nav__btn prog-nav__btn--next" data-target="child">
+              次のプログラムを読む
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="prog-nav__next-name">こども教育</span>
+            </button>
           </div>
         </div>
 
@@ -656,6 +686,22 @@
             </div>
 
           </div>
+
+          <div class="prog-nav">
+            <button class="prog-nav__btn prog-nav__btn--prev" data-target="nursing">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              前のプログラムを読む
+            </button>
+            <button class="prog-nav__btn prog-nav__btn--next" data-target="future">
+              次のプログラムを読む
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="prog-nav__next-name">未来探究</span>
+            </button>
+          </div>
         </div>
 
         <!-- Panel：未来探究 -->
@@ -693,6 +739,22 @@
               </div>
             </div>
 
+          </div>
+
+          <div class="prog-nav">
+            <button class="prog-nav__btn prog-nav__btn--prev" data-target="child">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              前のプログラムを読む
+            </button>
+            <button class="prog-nav__btn prog-nav__btn--next" data-target="career">
+              次のプログラムを読む
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="prog-nav__next-name">キャリアビルド</span>
+            </button>
           </div>
         </div>
 
@@ -732,6 +794,22 @@
             </div>
 
           </div>
+
+          <div class="prog-nav">
+            <button class="prog-nav__btn prog-nav__btn--prev" data-target="future">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              前のプログラムを読む
+            </button>
+            <button class="prog-nav__btn prog-nav__btn--next" data-target="sports">
+              次のプログラムを読む
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="prog-nav__next-name">スポーツ</span>
+            </button>
+          </div>
         </div>
 
         <!-- Panel：スポーツ -->
@@ -769,6 +847,16 @@
               </div>
             </div>
 
+          </div>
+
+          <div class="prog-nav">
+            <button class="prog-nav__btn prog-nav__btn--prev" data-target="career">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              前のプログラムを読む
+            </button>
+            <span class="prog-nav__spacer"></span>
           </div>
         </div>
 
@@ -1386,7 +1474,7 @@
 
           <h2 class="access__school-name">
             神奈川歯科大学系属<br>
-            緑ヶ丘女子中学校・高等学校
+            緑ヶ丘女子高等学校
           </h2>
 
           <dl class="access__list">
@@ -1424,8 +1512,8 @@
                 交通
               </dt>
               <dd class="access__item-val">
-                京急線「北久里浜駅」より徒歩約10分<br>
-                JR横須賀線「久里浜駅」より徒歩約15分
+                京急線「汐入駅」より徒歩約7分<br>
+                JR横須賀線「横須賀駅」より徒歩約15分
               </dd>
             </div>
 
@@ -1452,7 +1540,7 @@
   <!-- フッター -->
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span class="site-footer__logo">緑ヶ丘女子</span>
+      <span class="site-footer__logo">神奈川歯科大学系属緑ヶ丘女子高等学校</span>
       <nav class="site-footer__nav" aria-label="フッターナビ">
         <a href="#about">学校について</a>
         <a href="#features">進化のポイント</a>

@@ -373,25 +373,6 @@ button {
   text-transform: uppercase;
 }
 
-/* NEWバッジ：右下の丸バッジ */
-.hero__badge--new {
-  bottom: 24px;
-  right: 20%;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  color: #fff;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: rotateBadge 8s linear infinite;
-}
-
-@keyframes rotateBadge {
-  to { transform: rotate(360deg); }
-}
 
 /* 写真右端のアクセントライン */
 .hero__photo-accent {
@@ -556,32 +537,45 @@ button {
   letter-spacing: 0.05em;
 }
 
-/* ---- スクロール誘導 ---- */
+/* ---- スクロール誘導（進化を読む） ---- */
 .hero__scroll {
   position: absolute;
-  bottom: 24px;
-  right: 24px;
+  bottom: 28px;
+  right: 28px;
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.hero__scroll:hover {
+  transform: translateY(4px);
 }
 
 .hero__scroll-text {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 9px;
-  font-weight: 600;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
   color: var(--color-text-sub);
-  letter-spacing: 0.3em;
+  letter-spacing: 0.18em;
   writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
-.hero__scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--color-main), transparent);
+.hero__scroll-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   animation: scrollBounce 1.8s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 /* ---- アニメーション定義 ---- */
@@ -591,15 +585,14 @@ button {
 }
 
 @keyframes scrollBounce {
-  0%, 100% { transform: scaleY(1); opacity: 1; }
-  50%       { transform: scaleY(0.7); opacity: 0.4; }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
 }
 
 /* ---- アクセシビリティ：動き軽減 ---- */
 @media (prefers-reduced-motion: reduce) {
   .hero__photo,
-  .hero__badge--new,
-  .hero__scroll-line,
+  .hero__scroll-icon,
   .hero__magazine-label,
   .hero__copy-wrap,
   .hero__sub,
@@ -2067,6 +2060,62 @@ button {
   padding-left: 14px;
 }
 
+/* ---- プログラム前後ナビ ---- */
+.prog-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.prog-nav__spacer {
+  flex: 1;
+}
+
+.prog-nav__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-main);
+  background-color: var(--color-base);
+  border: 1.5px solid var(--color-main);
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background-color 0.25s, color 0.25s, transform 0.25s;
+}
+
+.prog-nav__btn:hover {
+  background-color: var(--color-main);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.prog-nav__next-name {
+  font-size: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background-color: var(--color-main-light);
+  color: #2E5E27;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-left: 4px;
+}
+
+.prog-nav__btn:hover .prog-nav__next-name {
+  background-color: rgba(255,255,255,0.25);
+  color: #fff;
+}
+
 /* ---- マガジン風フッター ---- */
 .programs__mag-footer {
   display: flex;
@@ -2797,12 +2846,14 @@ button {
 
 .final-cta__title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 5.5vw, 56px);
+  font-size: clamp(22px, 4vw, 48px);
   font-weight: 600;
   color: #ffffff;
-  line-height: 1.4;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   margin-bottom: 24px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .final-cta__title em {
@@ -2819,6 +2870,9 @@ button {
   display: block;
   font-style: italic;
   color: var(--color-main-light);
+  white-space: nowrap;
+  font-size: clamp(18px, 3.2vw, 40px);
+  overflow: hidden;
 }
 
 .final-cta__sub {
@@ -3055,11 +3109,12 @@ button {
 }
 
 .site-footer__logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--color-main-light);
-  letter-spacing: 0.08em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(13px, 2vw, 17px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  text-align: center;
 }
 
 .site-footer__nav {
