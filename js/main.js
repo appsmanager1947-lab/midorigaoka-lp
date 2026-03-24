@@ -343,3 +343,75 @@ document.querySelectorAll('.point-card.scroll-reveal').forEach(card => {
     });
   });
 })();
+
+
+/* ========================================
+   Section 5：スクロール連動タブ自動切り替え
+======================================== */
+(function () {
+  const tabs   = document.querySelectorAll('.prog-tab');
+  const panels = document.querySelectorAll('.prog-panel');
+  if (!tabs.length) return;
+
+  let autoTimer   = null;
+  let currentIdx  = 0;
+  let hasStarted  = false;
+  let userClicked = false;
+
+  /* タブを切り替える共通関数 */
+  function switchTab(idx) {
+    tabs.forEach((t, i) => {
+      t.classList.toggle('is-active', i === idx);
+      t.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+    panels.forEach((p, i) => {
+      if (i === idx) {
+        p.removeAttribute('hidden');
+        requestAnimationFrame(() => p.classList.add('is-active'));
+      } else {
+        p.classList.remove('is-active');
+        p.addEventListener('transitionend', () => {
+          if (!p.classList.contains('is-active')) p.setAttribute('hidden', '');
+        }, { once: true });
+      }
+    });
+    currentIdx = idx;
+  }
+
+  /* 自動切り替えを開始 */
+  function startAuto() {
+    if (userClicked || hasStarted) return;
+    hasStarted = true;
+    autoTimer = setInterval(() => {
+      const next = currentIdx + 1;
+      if (next >= tabs.length) {
+        clearInterval(autoTimer); /* 最後まで行ったら止まる */
+        return;
+      }
+      switchTab(next);
+    }, 2500);
+  }
+
+  /* タブクリック時：自動停止 + 手動切り替え */
+  tabs.forEach((tab, idx) => {
+    tab.addEventListener('click', () => {
+      userClicked = true;
+      clearInterval(autoTimer);
+      switchTab(idx);
+    });
+  });
+
+  /* Section 5 が画面に入ったら自動開始 */
+  const programsSection = document.querySelector('.programs');
+  if (programsSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startAuto();
+          observer.unobserve(programsSection);
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(programsSection);
+  }
+})();
