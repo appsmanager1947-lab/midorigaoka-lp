@@ -125,12 +125,27 @@ button {
 
 /* テキストロゴ（画像がない場合の代替） */
 .navbar__logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  transition: color var(--transition-base);
+}
+.navbar__logo-sup {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--color-main);
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+.navbar__logo-main {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--color-main);
   letter-spacing: 0.05em;
-  transition: color var(--transition-base);
+  line-height: 1.2;
 }
 
 /* ---- PC ナビリンク ---- */
