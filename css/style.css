@@ -323,33 +323,18 @@ button {
   width: 100%;
   min-height: 100dvh;
   display: grid;
-  grid-template-columns: 1fr; /* スマホ：1カラム */
+  grid-template-columns: 58% 42%; /* 全サイズ固定・変更しない */
   overflow: hidden;
   background-color: var(--color-base);
-}
-
-@media (min-width: 768px) {
-  .hero {
-    grid-template-columns: 58% 42%; /* PC：2カラム */
-  }
 }
 
 /* ---- 左：写真パネル ---- */
 .hero__photo-panel {
   position: relative;
   width: 100%;
-  height: 55vw; /* スマホ：画面幅の55% */
-  min-height: 260px;
+  height: 100dvh;
   overflow: hidden;
-  clip-path: none; /* スマホでは斜めクリップなし */
-}
-
-@media (min-width: 768px) {
-  .hero__photo-panel {
-    height: 100dvh;
-    min-height: unset;
-    clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
-  }
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%); /* 全サイズで斜めクリップ維持 */
 }
 
 .hero__photo {
@@ -420,7 +405,8 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 32px 24px 80px; /* スマホ：ナビ分オフセット不要 */
+  /* スマホ：padding小さめ・横は最小限 */
+  padding: calc(var(--navbar-height) + 12px) 4% 24px 3%;
   overflow: hidden;
   background-color: var(--color-base);
 }
@@ -438,7 +424,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(60px, 18vw, 180px);
+  font-size: clamp(40px, 14vw, 180px); /* vwで画面幅に連動 */
   font-weight: 700;
   color: var(--color-main-light);
   opacity: 0.18;
@@ -448,13 +434,19 @@ button {
   letter-spacing: -0.02em;
 }
 
-/* ---- 雑誌ラベル（罫線＋タグ） ---- */
+/* ---- 雑誌ラベル（罫線＋タグ）スマホでは非表示 ---- */
 .hero__magazine-label {
-  display: flex;
+  display: none; /* スマホでは非表示にして高さを節約 */
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   animation: fadeSlideUp 0.7s ease 0.4s both;
+}
+
+@media (min-width: 480px) {
+  .hero__magazine-label {
+    display: flex;
+  }
 }
 
 .hero__magazine-line {
@@ -478,37 +470,57 @@ button {
 .hero__copy-wrap {
   display: flex;
   align-items: flex-end;
-  gap: 8px;
-  margin-bottom: 16px;
-  flex-wrap: nowrap; /* 折り返し禁止 */
+  gap: 4px; /* スマホで間隔を詰める */
+  margin-bottom: 12px;
+  flex-wrap: nowrap; /* 絶対に折り返さない */
+  overflow: hidden;
   animation: fadeSlideUp 0.7s ease 0.6s both;
+}
+
+@media (min-width: 768px) {
+  .hero__copy-wrap {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
 }
 
 /* 縦書きの「未来を」 */
 .hero__copy-vertical {
   writing-mode: vertical-rl;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: clamp(13px, 3.5vw, 22px);
+  font-size: clamp(10px, 2.8vw, 22px); /* vwで連動・最小10px */
   font-weight: 700;
   color: var(--color-main);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   line-height: 1.2;
-  border-right: 3px solid var(--color-accent);
-  padding-right: 8px;
-  margin-right: 4px;
+  border-right: 2px solid var(--color-accent);
+  padding-right: 6px;
+  margin-right: 2px;
   height: fit-content;
   white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .hero__copy-vertical {
+    font-size: clamp(14px, 2.5vw, 22px);
+    border-right-width: 3px;
+    padding-right: 10px;
+    margin-right: 4px;
+    letter-spacing: 0.15em;
+  }
 }
 
 /* 横書きの「私が選ぶ。」 */
 .hero__title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 10vw, 88px);
+  font-size: clamp(28px, 7.5vw, 88px); /* vwで連動・最小28px */
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.1;
   letter-spacing: -0.01em;
-  white-space: nowrap; /* 折り返し禁止 */
+  white-space: nowrap; /* 絶対に折り返さない */
+  overflow: hidden;
 }
 
 .hero__title em {
@@ -519,22 +531,37 @@ button {
 /* ---- サブコピー ---- */
 .hero__sub {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: clamp(11px, 1.5vw, 14px);
+  font-size: clamp(10px, 2.2vw, 18px); /* vwで連動 */
   font-weight: 400;
   color: var(--color-text-sub);
-  letter-spacing: 0.08em;
-  line-height: 2;
-  margin-bottom: 24px;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  margin-bottom: 12px;
   animation: fadeSlideUp 0.7s ease 0.8s both;
+}
+
+@media (min-width: 768px) {
+  .hero__sub {
+    letter-spacing: 0.06em;
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
 }
 
 /* ---- 区切り罫線 ---- */
 .hero__divider {
-  width: 48px;
+  width: 36px;
   height: 2px;
   background: linear-gradient(to right, var(--color-main), var(--color-accent));
-  margin-bottom: 28px;
+  margin-bottom: 14px;
   animation: fadeSlideUp 0.7s ease 0.9s both;
+}
+
+@media (min-width: 768px) {
+  .hero__divider {
+    width: 48px;
+    margin-bottom: 28px;
+  }
 }
 
 /* ---- CTAボタン ---- */
@@ -549,31 +576,31 @@ button {
 .hero__cta {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
+  gap: 6px;
+  padding: clamp(10px, 2vw, 16px) clamp(14px, 3.5vw, 32px);
   white-space: nowrap;
   background-color: var(--color-main);
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 14px;
+  font-size: clamp(11px, 2vw, 15px);
   font-weight: 700;
   border-radius: 4px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  box-shadow: 4px 4px 0 var(--color-main-light);
+  box-shadow: 3px 3px 0 var(--color-main-light);
 }
 
 .hero__cta:hover {
   background-color: #3a7030;
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--color-main-light);
+  box-shadow: 5px 5px 0 var(--color-main-light);
 }
 
 .hero__cta-note {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: clamp(10px, 1.2vw, 12px);
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(9px, 1.8vw, 13px);
   color: var(--color-text-sub);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 /* ---- スクロール誘導（進化を読む） ---- */
@@ -1556,7 +1583,8 @@ button {
 }
 
 .merits__fig--sm img {
-  height: 140px;
+  aspect-ratio: 1 / 1; /* 全サイズで正方形 */
+  height: auto;
 }
 
 .merits__fig--offset {
@@ -1568,7 +1596,8 @@ button {
 }
 
 .merits__fig--tall img {
-  height: 220px; /* モバイルは少し低めに */
+  aspect-ratio: 1 / 1; /* モバイルは正方形 */
+  height: auto;
 }
 
 .merits__fig--md {
@@ -1576,7 +1605,8 @@ button {
 }
 
 .merits__fig--md img {
-  height: 180px; /* モバイルは少し低めに */
+  aspect-ratio: 1 / 1; /* モバイルは正方形 */
+  height: auto;
 }
 
 .merits__fig--wide {
@@ -1584,7 +1614,8 @@ button {
 }
 
 .merits__fig--wide img {
-  height: 220px;
+  aspect-ratio: 1 / 1; /* モバイルは正方形 */
+  height: auto;
   width: 100%;
 }
 
@@ -1801,16 +1832,24 @@ button {
 
   .merits__fig--md img {
     height: 160px;
+    aspect-ratio: unset; /* PC時は正方形解除 */
   }
 
   .merits__fig--tall img {
     height: 300px;
+    aspect-ratio: unset; /* PC時は正方形解除 */
+  }
+
+  .merits__fig--wide img {
+    height: 280px;
+    aspect-ratio: unset; /* PC時は正方形解除 */
   }
 }
 
 @media (min-width: 1024px) {
   .merits__fig--sm img {
     height: 200px;
+    aspect-ratio: unset; /* PC時は正方形解除 */
   }
 }
 
