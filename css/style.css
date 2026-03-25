@@ -707,12 +707,42 @@ button {
     display: flex;
   }
 
+  /* タブレット幅では文字サイズ・間隔を縮小して折り返しを防ぐ */
+  .navbar__nav-list {
+    gap: 16px;
+  }
+
+  .navbar__nav-list a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
   .navbar__cta {
     display: inline-flex;
+    font-size: 12px;
+    padding: 8px 14px;
+    white-space: nowrap;
   }
 
   .navbar__hamburger {
     display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  /* 広い画面では通常サイズに戻す */
+  .navbar__nav-list {
+    gap: 28px;
+  }
+
+  .navbar__nav-list a {
+    font-size: 14px;
+  }
+
+  .navbar__cta {
+    font-size: 13px;
+    padding: 10px 20px;
   }
 }
 
