@@ -1680,26 +1680,6 @@ button {
   margin: 0;
 }
 
-.merits__item-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.merits__item-list li {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12px;
-  color: var(--color-text-sub);
-  line-height: 1.9;
-  letter-spacing: 0.04em;
-  padding-left: 1.2em;
-  position: relative;
-}
-.merits__item-list li::before {
-  content: '・';
-  position: absolute;
-  left: 0;
-}
-
 .merits__item-badge {
   display: inline-block;
   margin-top: 12px;
@@ -1720,6 +1700,10 @@ button {
   flex-direction: column; /* モバイルは縦積み */
   gap: 24px;
   align-items: flex-start;
+}
+
+.merits__block-b .merits__item {
+  flex: 1; /* 写真の残りスペースをすべてテキストに */
 }
 
 /* ---- ブロック C ---- */
@@ -1830,10 +1814,11 @@ button {
 
   .merits__block-b {
     flex-direction: row; /* PC以上で横並びに戻す */
-    gap: 28px;
+    gap: 40px;
+    align-items: flex-start;
   }
 
-  .merits__item-with-photo {
+.merits__item-with-photo {
     flex-direction: row; /* PC以上で横並びに戻す */
     gap: 20px;
     align-items: flex-start;
