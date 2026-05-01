@@ -359,3 +359,29 @@ document.querySelectorAll('.prog-nav__btn').forEach(btn => {
     }
   });
 });
+
+
+/* フロー図：クラスカード → クラス説明へスクロール */
+document.querySelectorAll('.flow__class[data-class-target]').forEach(card => {
+  const activate = () => {
+    const target = document.getElementById(card.dataset.classTarget);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  card.addEventListener('click', activate);
+  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+});
+
+
+/* フロー図：プログラムカード → プログラムタブ切り替え＋スクロール */
+document.querySelectorAll('.flow__program[data-prog-target]').forEach(card => {
+  const activate = () => {
+    const target = card.dataset.progTarget;
+    const tab = document.querySelector(`.prog-tab[data-target="${target}"]`);
+    if (tab) {
+      tab.click();
+      document.querySelector('.prog-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+  card.addEventListener('click', activate);
+  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+});
